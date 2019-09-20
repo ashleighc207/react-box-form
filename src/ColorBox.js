@@ -14,7 +14,7 @@ class ColorBox extends Component {
   render(){
     let styles = {'backgroundColor': this.props.backgroundColor, 'height': this.props.height + 'px', 'width': this.props.width + 'px'};
     return(
-      <div>
+      <div id={this.props.id}>
         <div className='ColorBox' style={styles}>
 
         </div>

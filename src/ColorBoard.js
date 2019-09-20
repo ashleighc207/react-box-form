@@ -21,7 +21,9 @@ class ColorBoard extends Component {
   }
 
   removeBox(box){
-    console.log(box)
+    let thisBox = document.getElementById(box);
+    thisBox.remove();
+
   }
 
   render(){
