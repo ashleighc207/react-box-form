@@ -7,6 +7,8 @@ class BoxForm extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
     this.state = {
       width: '',
       height: '',
@@ -18,6 +20,16 @@ class BoxForm extends Component {
     this.setState({
       [evt.target.name]: evt.target.value
     })
+  }
+
+  handleFocus(evt){
+    evt.target.previousSibling.classList.add('active')
+  }
+
+  handleBlur(evt){
+    if(evt.target.value === "") {
+      evt.target.previousSibling.classList.remove('active')
+    }
   }
 
   handleSubmit(evt){
@@ -34,31 +46,43 @@ class BoxForm extends Component {
     return(
       <div className="BoxForm">
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="width-input">Width</label>
-          <input
-            type="text"
-            name="width"
-            id="width-input"
-            onChange={this.handleChange}
-            value={this.state.width}
-          />
-          <label htmlFor="height-input">Height</label>
-          <input
-            type="text"
-            name="height"
-            id="height-input"
-            onChange={this.handleChange}
-            value={this.state.height}
-          />
-          <label htmlFor="color-input">Color</label>
-          <input
-            type="text"
-            name="color"
-            id="color-input"
-            onChange={this.handleChange}
-            value={this.state.color}
-          />
-          <button>Add box</button>
+          <div className="BoxForm--input_group">
+            <label htmlFor="width-input">Width</label>
+            <input
+              type="text"
+              name="width"
+              id="width-input"
+              onChange={this.handleChange}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+              value={this.state.width}
+            />
+          </div>
+          <div className="BoxForm--input_group">
+            <label htmlFor="height-input">Height</label>
+            <input
+              type="text"
+              name="height"
+              id="height-input"
+              onChange={this.handleChange}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+              value={this.state.height}
+              />
+          </div>
+          <div className="BoxForm--input_group">
+            <label htmlFor="color-input">Color</label>
+            <input
+              type="text"
+              name="color"
+              id="color-input"
+              onChange={this.handleChange}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+              value={this.state.color}
+            />
+          </div>
+          <button className="BoxForm--submit_btn">Add box</button>
         </form>
       </div>
     )
