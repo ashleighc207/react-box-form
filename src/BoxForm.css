@@ -4,6 +4,7 @@
   width: 50%;
   margin: 0 auto;
   text-align: left;
+  margin-top: 3rem;
 }
 
 .BoxForm--input_group {
@@ -35,6 +36,7 @@
   height: 30px;
   font-size: 18px;
   padding: 5px;
+  width: 100%;
 }
 
 .BoxForm input[type="text"]:focus {
@@ -52,4 +54,15 @@
   margin: 20px auto;
   padding: 10px 35px;
   border-radius: 29px;
+  box-shadow: 2px 2px 8px rgba(33, 33, 33, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.BoxForm--submit_btn:focus {
+  outline: none;
+}
+
+.BoxForm--submit_btn:hover {
+  box-shadow: 2px 2px 8px rgba(33, 33, 33, 0.5);
 }
