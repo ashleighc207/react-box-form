@@ -66,3 +66,13 @@
 .BoxForm--submit_btn:hover {
   box-shadow: 2px 2px 8px rgba(33, 33, 33, 0.5);
 }
+
+.BoxForm--heading_one {
+  font-weight: 400;
+}
+
+.BoxForm--input_helper_text {
+  font-size: 12px;
+  margin-left: 5px;
+  font-style: italic;
+}

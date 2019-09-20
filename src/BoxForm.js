@@ -45,6 +45,7 @@ class BoxForm extends Component {
   render(){
     return(
       <div className="BoxForm">
+      <h1 className="BoxForm--heading_one"> Create a new box! </h1>
         <form onSubmit={this.handleSubmit}>
           <div className="BoxForm--input_group">
             <label htmlFor="width-input">Width</label>
@@ -81,6 +82,7 @@ class BoxForm extends Component {
               onBlur={this.handleBlur}
               value={this.state.color}
             />
+            <span className="BoxForm--input_helper_text">This field supports color hex codes only</span>
           </div>
           <button className="BoxForm--submit_btn">Add box</button>
         </form>
