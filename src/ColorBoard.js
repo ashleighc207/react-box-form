@@ -11,12 +11,20 @@ class ColorBoard extends Component {
     this.state = {
       boxes: []
     }
+    this.addNewBox = this.addNewBox.bind(this)
   }
+
+  addNewBox(box) {
+    console.log(box)
+  }
+
   render(){
     return(
       <div className="ColorBoard">
-        <BoxForm />
-        <ColorBox />
+        <BoxForm addNewBox={this.addNewBox}/>
+        {this.state.boxes.map(box =>{
+          return <ColorBox />
+        })}
       </div>
     )
   }
