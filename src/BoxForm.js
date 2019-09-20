@@ -62,6 +62,7 @@ class BoxForm extends Component {
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
               value={this.state.width}
+              required
             />
           </div>
           <div className="BoxForm--input_group">
@@ -74,6 +75,7 @@ class BoxForm extends Component {
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
               value={this.state.height}
+              required
               />
           </div>
           <div className="BoxForm--input_group">
@@ -86,6 +88,7 @@ class BoxForm extends Component {
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
               value={this.state.color}
+              required
             />
             <span className="BoxForm--input_helper_text">This field supports color hex codes only</span>
           </div>
