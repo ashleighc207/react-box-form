@@ -12,7 +12,8 @@ class BoxForm extends Component {
     this.state = {
       width: '',
       height: '',
-      color: ''
+      color: '',
+      id: uuid()
     }
   }
 
@@ -40,6 +41,10 @@ class BoxForm extends Component {
       height: '',
       color: ''
     })
+    let labels = document.getElementsByTagName('label');
+    for(let i = 0; i < labels.length; i++){
+      labels[i].classList.remove('active')
+    }
   }
 
   render(){
