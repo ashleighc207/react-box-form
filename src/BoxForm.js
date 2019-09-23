@@ -12,8 +12,7 @@ class BoxForm extends Component {
     this.state = {
       width: '',
       height: '',
-      color: '',
-      id: uuid()
+      color: ''
     }
   }
 
@@ -35,8 +34,8 @@ class BoxForm extends Component {
 
   handleSubmit(evt){
     evt.preventDefault();
-    this.setState({id: uuid()});
-    this.props.addNewBox(this.state)
+    const boxState = {...this.state, id: uuid()}
+    this.props.addNewBox(boxState)
     this.setState({
       width: '',
       height: '',
