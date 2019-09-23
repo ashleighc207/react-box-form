@@ -90,7 +90,7 @@ class BoxForm extends Component {
               value={this.state.color}
               required
             />
-            <span className="BoxForm--input_helper_text">This field supports color hex codes only</span>
+            <span className="BoxForm--input_helper_text">This field supports color hex, rgb/rgba, hsl, and named colors</span>
           </div>
           <button className="BoxForm--submit_btn">Add box</button>
         </form>
